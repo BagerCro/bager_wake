@@ -1,4 +1,6 @@
+import '../../core/services/bulk_fix_service.dart';
 import '../../core/services/diagnostics_service.dart';
+import '../../core/services/important_apps_service.dart';
 import '../../core/services/oem_profile_service.dart';
 import '../../core/services/test_engine_service.dart';
 
@@ -10,9 +12,13 @@ class AppServices {
     required this.diagnostics,
     required this.oemProfiles,
     required this.testEngine,
+    required this.bulkFix,
+    required this.importantApps,
   });
 
   final DiagnosticsService diagnostics;
   final OemProfileService oemProfiles;
   final TestEngineService testEngine;
+  final BulkFixService bulkFix;
+  final ImportantAppsService importantApps;
 }

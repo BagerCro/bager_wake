@@ -28,6 +28,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get navAbout => 'About';
 
   @override
+  String get navBulkFix => 'Fix everything';
+
+  @override
   String get commonRetry => 'Retry';
 
   @override
@@ -339,4 +342,61 @@ class AppLocalizationsEn extends AppLocalizations {
   String aboutVersion(Object version) {
     return 'Version $version';
   }
+
+  @override
+  String get bulkFixTitle => 'Fix everything';
+
+  @override
+  String get bulkFixIntro =>
+      'The app can\'t turn off battery optimization for other apps by itself — Android simply doesn\'t allow that. Instead, here\'s a list: tap an app, its settings screen opens, change it by hand there, and when you come back we\'ll automatically re-check the state.';
+
+  @override
+  String get bulkFixSectionImportant => 'Important apps';
+
+  @override
+  String get bulkFixSectionOthers => 'All other apps';
+
+  @override
+  String get bulkFixSectionAutostart => 'Autostart (manual check)';
+
+  @override
+  String get bulkFixAutostartExplainer =>
+      'Android gives no app a way to automatically check whether \'autostart\' is enabled for another app. This has to stay a manual check — confirm each step yourself.';
+
+  @override
+  String get bulkFixCategoryMessaging => 'Messaging';
+
+  @override
+  String get bulkFixCategoryBanking => 'Banking';
+
+  @override
+  String get bulkFixCategoryCalendar => 'Calendar';
+
+  @override
+  String get bulkFixCategoryOther => 'Other';
+
+  @override
+  String get bulkFixStatusExempt => 'Exempt';
+
+  @override
+  String get bulkFixStatusNotExempt => 'Not exempt';
+
+  @override
+  String get bulkFixStatusUnknown => 'Can\'t be checked';
+
+  @override
+  String get bulkFixCheckButton => 'Check settings';
+
+  @override
+  String get bulkFixRefresh => 'Refresh';
+
+  @override
+  String get bulkFixLoadError => 'Couldn\'t load the list of installed apps.';
+
+  @override
+  String get bulkFixEmptyOthers => 'No other installed apps to show.';
+
+  @override
+  String get bulkFixNoImportantInstalled =>
+      'None of the known important apps were found on this phone.';
 }

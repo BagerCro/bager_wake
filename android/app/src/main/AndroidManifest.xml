@@ -72,6 +72,13 @@
             <data android:mimeType="text/plain"/>
         </intent>
 
+        <!-- Play-friendly way to enumerate launchable third-party apps for the "Popravi sve" tab,
+             instead of the broad QUERY_ALL_PACKAGES permission BagerGuard uses. -->
+        <intent>
+            <action android:name="android.intent.action.MAIN"/>
+            <category android:name="android.intent.category.LAUNCHER"/>
+        </intent>
+
         <!-- OEM packages referenced by assets/oem_profiles.json. Without these, resolveActivity()
              silently returns null for all of them on API 30+ package visibility, even on a phone
              that has the app installed, and every intent candidate looks unresolvable. -->

@@ -9,5 +9,6 @@ class MainActivity : FlutterActivity() {
         DiagnosticsPlugin.register(flutterEngine, this)
         IntentLauncherPlugin.register(flutterEngine, this)
         TestEnginePlugin.register(flutterEngine, this)
+        BulkFixPlugin.register(flutterEngine, this)
     }
 }

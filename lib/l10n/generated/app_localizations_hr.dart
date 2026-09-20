@@ -28,6 +28,9 @@ class AppLocalizationsHr extends AppLocalizations {
   String get navAbout => 'O aplikaciji';
 
   @override
+  String get navBulkFix => 'Popravi sve';
+
+  @override
   String get commonRetry => 'Pokušaj ponovno';
 
   @override
@@ -337,4 +340,63 @@ class AppLocalizationsHr extends AppLocalizations {
   String aboutVersion(Object version) {
     return 'Verzija $version';
   }
+
+  @override
+  String get bulkFixTitle => 'Popravi sve';
+
+  @override
+  String get bulkFixIntro =>
+      'Aplikacija ne može sama isključiti optimizaciju baterije za druge aplikacije – to Android jednostavno ne dopušta. Umjesto toga, evo popisa: klikni aplikaciju, otvorit će se njene postavke, promijeni tamo ručno, a kad se vratiš ovdje ćemo automatski ponovno provjeriti stanje.';
+
+  @override
+  String get bulkFixSectionImportant => 'Važne aplikacije';
+
+  @override
+  String get bulkFixSectionOthers => 'Svi ostali appovi';
+
+  @override
+  String get bulkFixSectionAutostart => 'Autostart (ručna provjera)';
+
+  @override
+  String get bulkFixAutostartExplainer =>
+      'Android ne nudi nikakav način da bilo koja aplikacija automatski provjeri je li \'autostart\' uključen za drugu aplikaciju. Ovo mora ostati ručna provjera – potvrdi svaki korak sam/a.';
+
+  @override
+  String get bulkFixCategoryMessaging => 'Poruke';
+
+  @override
+  String get bulkFixCategoryBanking => 'Bankarstvo';
+
+  @override
+  String get bulkFixCategoryCalendar => 'Kalendar';
+
+  @override
+  String get bulkFixCategoryOther => 'Ostalo';
+
+  @override
+  String get bulkFixStatusExempt => 'Izuzeto';
+
+  @override
+  String get bulkFixStatusNotExempt => 'Nije izuzeto';
+
+  @override
+  String get bulkFixStatusUnknown => 'Ne može se provjeriti';
+
+  @override
+  String get bulkFixCheckButton => 'Provjeri postavke';
+
+  @override
+  String get bulkFixRefresh => 'Osvježi';
+
+  @override
+  String get bulkFixLoadError =>
+      'Nisam uspio učitati popis instaliranih aplikacija.';
+
+  @override
+  String get bulkFixEmptyOthers =>
+      'Nema drugih instaliranih aplikacija za prikaz.';
+
+  @override
+  String get bulkFixNoImportantInstalled =>
+      'Nijedna od poznatih važnih aplikacija nije pronađena na ovom telefonu.';
 }

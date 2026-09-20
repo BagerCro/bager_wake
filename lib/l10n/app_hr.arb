@@ -8,6 +8,7 @@
   "navFixGuide": "Vodič",
   "navHistory": "Povijest",
   "navAbout": "O aplikaciji",
+  "navBulkFix": "Popravi sve",
 
   "commonRetry": "Pokušaj ponovno",
   "commonCancel": "Odustani",
@@ -136,5 +137,24 @@
   "aboutTipTitle": "Napojnica",
   "aboutTipBody": "Ovdje će jednog dana biti opcionalna napojnica za razvoj aplikacije. Trenutno kupnja nije dostupna u aplikaciji.",
   "aboutTipComingSoon": "Uskoro",
-  "aboutVersion": "Verzija {version}"
+  "aboutVersion": "Verzija {version}",
+
+  "bulkFixTitle": "Popravi sve",
+  "bulkFixIntro": "Aplikacija ne može sama isključiti optimizaciju baterije za druge aplikacije – to Android jednostavno ne dopušta. Umjesto toga, evo popisa: klikni aplikaciju, otvorit će se njene postavke, promijeni tamo ručno, a kad se vratiš ovdje ćemo automatski ponovno provjeriti stanje.",
+  "bulkFixSectionImportant": "Važne aplikacije",
+  "bulkFixSectionOthers": "Svi ostali appovi",
+  "bulkFixSectionAutostart": "Autostart (ručna provjera)",
+  "bulkFixAutostartExplainer": "Android ne nudi nikakav način da bilo koja aplikacija automatski provjeri je li 'autostart' uključen za drugu aplikaciju. Ovo mora ostati ručna provjera – potvrdi svaki korak sam/a.",
+  "bulkFixCategoryMessaging": "Poruke",
+  "bulkFixCategoryBanking": "Bankarstvo",
+  "bulkFixCategoryCalendar": "Kalendar",
+  "bulkFixCategoryOther": "Ostalo",
+  "bulkFixStatusExempt": "Izuzeto",
+  "bulkFixStatusNotExempt": "Nije izuzeto",
+  "bulkFixStatusUnknown": "Ne može se provjeriti",
+  "bulkFixCheckButton": "Provjeri postavke",
+  "bulkFixRefresh": "Osvježi",
+  "bulkFixLoadError": "Nisam uspio učitati popis instaliranih aplikacija.",
+  "bulkFixEmptyOthers": "Nema drugih instaliranih aplikacija za prikaz.",
+  "bulkFixNoImportantInstalled": "Nijedna od poznatih važnih aplikacija nije pronađena na ovom telefonu."
 }

@@ -59,6 +59,15 @@ class FixStep {
             .toList(),
         requiresManualConfirm: json['requiresManualConfirm'] as bool? ?? true,
       );
+
+  /// Renders this step's copy for an arbitrary target app name, replacing a
+  /// literal "BagerWake" mention with [appName]. BagerWake's own fix guide
+  /// screen can keep calling titleHr/bodyHr directly (appName == "BagerWake"
+  /// is a no-op replace); the bulk-fix screen calls this for third-party apps.
+  String titleFor(String appName, {required bool english}) =>
+      (english ? titleEn : titleHr).replaceAll('BagerWake', appName);
+  String bodyFor(String appName, {required bool english}) =>
+      (english ? bodyEn : bodyHr).replaceAll('BagerWake', appName);
 }
 
 class OemProfile {

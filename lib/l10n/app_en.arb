@@ -8,6 +8,7 @@
   "navFixGuide": "Fix guide",
   "navHistory": "History",
   "navAbout": "About",
+  "navBulkFix": "Fix everything",
 
   "commonRetry": "Retry",
   "commonCancel": "Cancel",
@@ -136,5 +137,24 @@
   "aboutTipTitle": "Tip",
   "aboutTipBody": "Someday there will be an optional tip here to support development. Purchases aren't available in the app yet.",
   "aboutTipComingSoon": "Coming soon",
-  "aboutVersion": "Version {version}"
+  "aboutVersion": "Version {version}",
+
+  "bulkFixTitle": "Fix everything",
+  "bulkFixIntro": "The app can't turn off battery optimization for other apps by itself — Android simply doesn't allow that. Instead, here's a list: tap an app, its settings screen opens, change it by hand there, and when you come back we'll automatically re-check the state.",
+  "bulkFixSectionImportant": "Important apps",
+  "bulkFixSectionOthers": "All other apps",
+  "bulkFixSectionAutostart": "Autostart (manual check)",
+  "bulkFixAutostartExplainer": "Android gives no app a way to automatically check whether 'autostart' is enabled for another app. This has to stay a manual check — confirm each step yourself.",
+  "bulkFixCategoryMessaging": "Messaging",
+  "bulkFixCategoryBanking": "Banking",
+  "bulkFixCategoryCalendar": "Calendar",
+  "bulkFixCategoryOther": "Other",
+  "bulkFixStatusExempt": "Exempt",
+  "bulkFixStatusNotExempt": "Not exempt",
+  "bulkFixStatusUnknown": "Can't be checked",
+  "bulkFixCheckButton": "Check settings",
+  "bulkFixRefresh": "Refresh",
+  "bulkFixLoadError": "Couldn't load the list of installed apps.",
+  "bulkFixEmptyOthers": "No other installed apps to show.",
+  "bulkFixNoImportantInstalled": "None of the known important apps were found on this phone."
 }

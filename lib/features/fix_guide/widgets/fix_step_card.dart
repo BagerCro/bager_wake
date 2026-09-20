@@ -11,6 +11,7 @@ class FixStepCard extends StatelessWidget {
     required this.confirmed,
     required this.onConfirmedChanged,
     required this.onLaunch,
+    this.appName,
   });
 
   final int index;
@@ -19,13 +20,22 @@ class FixStepCard extends StatelessWidget {
   final ValueChanged<bool> onConfirmedChanged;
   final Future<void> Function() onLaunch;
 
+  /// Target app name for substituting the "BagerWake" placeholder in the
+  /// step copy. Null keeps the original Vodič behaviour (raw titleHr/bodyHr)
+  /// unchanged; the bulk-fix screen passes the third-party app's label here.
+  final String? appName;
+
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     final isHr = Localizations.localeOf(context).languageCode == 'hr';
-    final title = isHr ? step.titleHr : step.titleEn;
-    final body = isHr ? step.bodyHr : step.bodyEn;
+    final title = appName != null
+        ? step.titleFor(appName!, english: !isHr)
+        : (isHr ? step.titleHr : step.titleEn);
+    final body = appName != null
+        ? step.bodyFor(appName!, english: !isHr)
+        : (isHr ? step.bodyHr : step.bodyEn);
 
     return Card(
       margin: const EdgeInsets.only(bottom: 12),

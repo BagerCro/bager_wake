@@ -134,6 +134,12 @@ abstract class AppLocalizations {
   /// **'O aplikaciji'**
   String get navAbout;
 
+  /// No description provided for @navBulkFix.
+  ///
+  /// In hr, this message translates to:
+  /// **'Popravi sve'**
+  String get navBulkFix;
+
   /// No description provided for @commonRetry.
   ///
   /// In hr, this message translates to:
@@ -679,6 +685,114 @@ abstract class AppLocalizations {
   /// In hr, this message translates to:
   /// **'Verzija {version}'**
   String aboutVersion(Object version);
+
+  /// No description provided for @bulkFixTitle.
+  ///
+  /// In hr, this message translates to:
+  /// **'Popravi sve'**
+  String get bulkFixTitle;
+
+  /// No description provided for @bulkFixIntro.
+  ///
+  /// In hr, this message translates to:
+  /// **'Aplikacija ne može sama isključiti optimizaciju baterije za druge aplikacije – to Android jednostavno ne dopušta. Umjesto toga, evo popisa: klikni aplikaciju, otvorit će se njene postavke, promijeni tamo ručno, a kad se vratiš ovdje ćemo automatski ponovno provjeriti stanje.'**
+  String get bulkFixIntro;
+
+  /// No description provided for @bulkFixSectionImportant.
+  ///
+  /// In hr, this message translates to:
+  /// **'Važne aplikacije'**
+  String get bulkFixSectionImportant;
+
+  /// No description provided for @bulkFixSectionOthers.
+  ///
+  /// In hr, this message translates to:
+  /// **'Svi ostali appovi'**
+  String get bulkFixSectionOthers;
+
+  /// No description provided for @bulkFixSectionAutostart.
+  ///
+  /// In hr, this message translates to:
+  /// **'Autostart (ručna provjera)'**
+  String get bulkFixSectionAutostart;
+
+  /// No description provided for @bulkFixAutostartExplainer.
+  ///
+  /// In hr, this message translates to:
+  /// **'Android ne nudi nikakav način da bilo koja aplikacija automatski provjeri je li \'autostart\' uključen za drugu aplikaciju. Ovo mora ostati ručna provjera – potvrdi svaki korak sam/a.'**
+  String get bulkFixAutostartExplainer;
+
+  /// No description provided for @bulkFixCategoryMessaging.
+  ///
+  /// In hr, this message translates to:
+  /// **'Poruke'**
+  String get bulkFixCategoryMessaging;
+
+  /// No description provided for @bulkFixCategoryBanking.
+  ///
+  /// In hr, this message translates to:
+  /// **'Bankarstvo'**
+  String get bulkFixCategoryBanking;
+
+  /// No description provided for @bulkFixCategoryCalendar.
+  ///
+  /// In hr, this message translates to:
+  /// **'Kalendar'**
+  String get bulkFixCategoryCalendar;
+
+  /// No description provided for @bulkFixCategoryOther.
+  ///
+  /// In hr, this message translates to:
+  /// **'Ostalo'**
+  String get bulkFixCategoryOther;
+
+  /// No description provided for @bulkFixStatusExempt.
+  ///
+  /// In hr, this message translates to:
+  /// **'Izuzeto'**
+  String get bulkFixStatusExempt;
+
+  /// No description provided for @bulkFixStatusNotExempt.
+  ///
+  /// In hr, this message translates to:
+  /// **'Nije izuzeto'**
+  String get bulkFixStatusNotExempt;
+
+  /// No description provided for @bulkFixStatusUnknown.
+  ///
+  /// In hr, this message translates to:
+  /// **'Ne može se provjeriti'**
+  String get bulkFixStatusUnknown;
+
+  /// No description provided for @bulkFixCheckButton.
+  ///
+  /// In hr, this message translates to:
+  /// **'Provjeri postavke'**
+  String get bulkFixCheckButton;
+
+  /// No description provided for @bulkFixRefresh.
+  ///
+  /// In hr, this message translates to:
+  /// **'Osvježi'**
+  String get bulkFixRefresh;
+
+  /// No description provided for @bulkFixLoadError.
+  ///
+  /// In hr, this message translates to:
+  /// **'Nisam uspio učitati popis instaliranih aplikacija.'**
+  String get bulkFixLoadError;
+
+  /// No description provided for @bulkFixEmptyOthers.
+  ///
+  /// In hr, this message translates to:
+  /// **'Nema drugih instaliranih aplikacija za prikaz.'**
+  String get bulkFixEmptyOthers;
+
+  /// No description provided for @bulkFixNoImportantInstalled.
+  ///
+  /// In hr, this message translates to:
+  /// **'Nijedna od poznatih važnih aplikacija nije pronađena na ovom telefonu.'**
+  String get bulkFixNoImportantInstalled;
 }
 
 class _AppLocalizationsDelegate

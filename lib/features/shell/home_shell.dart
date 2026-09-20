@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../l10n/generated/app_localizations.dart';
 import '../about/about_screen.dart';
+import '../bulk_fix/bulk_fix_screen.dart';
 import '../dashboard/dashboard_screen.dart';
 import '../fix_guide/fix_guide_screen.dart';
 import '../history/history_screen.dart';
@@ -38,6 +39,12 @@ class _HomeShellState extends State<HomeShell> {
         oemProfiles: widget.services.oemProfiles,
       ),
       HistoryScreen(testEngine: widget.services.testEngine),
+      BulkFixScreen(
+        bulkFixService: widget.services.bulkFix,
+        importantAppsService: widget.services.importantApps,
+        oemProfileService: widget.services.oemProfiles,
+        diagnostics: widget.services.diagnostics,
+      ),
       const AboutScreen(),
     ];
 
@@ -66,6 +73,11 @@ class _HomeShellState extends State<HomeShell> {
             icon: const Icon(Icons.history_outlined),
             selectedIcon: const Icon(Icons.history),
             label: l10n.navHistory,
+          ),
+          NavigationDestination(
+            icon: const Icon(Icons.checklist_outlined),
+            selectedIcon: const Icon(Icons.checklist),
+            label: l10n.navBulkFix,
           ),
           NavigationDestination(
             icon: const Icon(Icons.info_outline),

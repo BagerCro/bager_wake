@@ -1,0 +1,24 @@
+{
+  "apps": [
+    { "package": "com.whatsapp", "nameHr": "WhatsApp", "category": "messaging" },
+    { "package": "com.whatsapp.w4b", "nameHr": "WhatsApp Business", "category": "messaging" },
+    { "package": "com.viber.voip", "nameHr": "Viber", "category": "messaging" },
+    { "package": "com.facebook.orca", "nameHr": "Messenger", "category": "messaging" },
+    { "package": "org.telegram.messenger", "nameHr": "Telegram", "category": "messaging" },
+    { "package": "com.discord", "nameHr": "Discord", "category": "messaging" },
+    { "package": "org.thoughtcrime.securesms", "nameHr": "Signal", "category": "messaging" },
+
+    { "package": "hr.asseco.android.zaba.new", "nameHr": "Zagrebačka banka", "category": "banking" },
+    { "package": "com.pbz.mbanking", "nameHr": "Privredna banka Zagreb (PBZ)", "category": "banking" },
+    { "package": "com.erstebank.mobilebanking", "nameHr": "Erste banka", "category": "banking" },
+    { "package": "at.raiffeisen.rbhrmbank", "nameHr": "Raiffeisenbank Austria Hrvatska", "category": "banking" },
+    { "package": "hr.otpbanka.mbank", "nameHr": "OTP banka", "category": "banking" },
+    { "package": "hr.hpb.mbanking", "nameHr": "Hrvatska poštanska banka (HPB)", "category": "banking" },
+
+    { "package": "com.google.android.calendar", "nameHr": "Google kalendar", "category": "calendar" },
+    { "package": "com.xiaomi.calendar", "nameHr": "Xiaomi kalendar", "category": "calendar" },
+
+    { "package": "com.google.android.gm", "nameHr": "Gmail", "category": "other" },
+    { "package": "com.microsoft.office.outlook", "nameHr": "Outlook", "category": "other" }
+  ]
+}
