@@ -1,0 +1,140 @@
+{
+  "@@locale": "en",
+
+  "appTitle": "BagerWake",
+
+  "navDashboard": "Dashboard",
+  "navTest": "Test",
+  "navFixGuide": "Fix guide",
+  "navHistory": "History",
+  "navAbout": "About",
+
+  "commonRetry": "Retry",
+  "commonCancel": "Cancel",
+  "commonClose": "Close",
+  "commonOpenSettings": "Open settings",
+  "commonLoading": "Loading…",
+  "commonError": "Something went wrong.",
+  "commonUnknown": "Unknown",
+
+  "statusOk": "OK",
+  "statusWarning": "Warning",
+  "statusProblem": "Problem",
+  "statusUnavailable": "Can't be checked",
+  "unavailableReasonLabel": "Reason",
+  "unavailableReasonFallback": "The app didn't get a reason from the system.",
+
+  "dashboardTitle": "Dashboard",
+  "dashboardDeviceSubtitle": "Android {release} · API {sdk}",
+  "@dashboardDeviceSubtitle": {
+    "placeholders": {
+      "release": { "type": "String" },
+      "sdk": { "type": "int" }
+    }
+  },
+  "dashboardLoadError": "Couldn't read the device state. Make sure the app has permission and try again.",
+  "dashboardUnknownDevice": "Unknown device",
+  "dashboardNotifPermButton": "Request permission",
+
+  "diagBatteryOptimizationTitle": "Battery optimization",
+  "diagBatteryOptimizationDesc": "If the app is under 'battery optimization', the system shuts down its background work when you're not using it — notifications and alarms can be delayed or never arrive.",
+
+  "diagNotificationsEnabledTitle": "Notification permission",
+  "diagNotificationsEnabledDesc": "Without this permission the system doesn't show the app's notifications at all, no matter what else is configured.",
+
+  "diagExactAlarmPermissionTitle": "Exact alarm permission",
+  "diagExactAlarmPermissionDesc": "Without this permission Android is allowed to push an alarm later instead of ringing it exactly when it was scheduled.",
+
+  "diagBackgroundRestrictedTitle": "Background work restricted",
+  "diagBackgroundRestrictedDesc": "When this is on, the system almost completely blocks the app from running while you're not looking at it — notifications usually don't arrive at all.",
+
+  "diagStandbyBucketTitle": "Activity group (App Standby)",
+  "diagStandbyBucketDesc": "Android sorts apps into groups based on how much you use them. A worse group gets fewer chances to run in the background, so notifications are delayed.",
+
+  "diagDataSaverTitle": "Data saver",
+  "diagDataSaverDesc": "When it's on, background apps aren't allowed to use mobile data — messages and sync wait until you open the app yourself.",
+
+  "diagPowerSaveModeTitle": "Battery saver mode",
+  "diagPowerSaveModeDesc": "This mode further throttles background work and delays alarms and notifications while it's on, to stretch battery life.",
+
+  "diagDozeStateTitle": "Doze (idle state)",
+  "diagDozeStateDesc": "When the phone sits untouched for a while, Android periodically 'puts all apps to sleep' — notifications get batched and arrive in bursts instead of right away.",
+
+  "testTitle": "Delivery test",
+  "testWindowLabel": "Test duration",
+  "testWindow15": "15 min",
+  "testWindow30": "30 min",
+  "testWindow60": "60 min",
+  "testPreflightTitle": "Before you start",
+  "testPreflightBody": "Lock the screen, don't open this app, and leave the phone alone while the test runs. Android has to believe the phone is idle to apply the restrictions we're testing — touching the phone makes the result unreliable. The three checks are deliberately spaced out rather than all firing at the end: the strongest one wakes the phone and would rescue the weaker ones, making the result look better than it is. That's why the notifications arrive one at a time.",
+  "testStartButton": "Start test",
+  "testNeedPermissions": "Some permissions needed for the test are missing.",
+  "testGoToDashboard": "Go to Dashboard",
+  "testRunningTitle": "Test running",
+  "testTimeRemaining": "Time remaining: {time}",
+  "@testTimeRemaining": {
+    "placeholders": { "time": { "type": "String" } }
+  },
+  "testCancelButton": "Cancel test",
+  "testResultsTitle": "Test results",
+  "testDirtyResultBanner": "This is NOT a clean reading.",
+  "testScreenUnlocked": "The screen was unlocked during the test.",
+  "testScreenUnlockedUnknown": "Can't verify whether the screen was unlocked during the test (missing usage-access permission) — the result is probably valid, but we can't confirm it.",
+  "testRebooted": "The phone rebooted during the test.",
+  "testNewTest": "New test",
+  "testRunInProgress": "A test is already running — showing its progress.",
+  "testNoResultsYet": "Results aren't ready yet.",
+
+  "laneAlarmClockTitle": "Alarm (strongest)",
+  "laneAlarmClockDesc": "The strongest kind of alarm Android offers — this is how alarm clocks work.",
+  "laneExactIdleTitle": "Exact reminder",
+  "laneExactIdleDesc": "This is what reminder apps use.",
+  "laneWorkManagerTitle": "Background sync",
+  "laneWorkManagerDesc": "This is what chat and sync apps use — the first thing manufacturers kill.",
+
+  "outcomePending": "Waiting…",
+  "outcomeFiredOnTime": "Arrived on time",
+  "outcomeFiredLate": "Late",
+  "outcomeNeverFired": "Never arrived",
+  "outcomeCancelled": "Cancelled",
+  "outcomeDelay": "Delay: {delay}",
+  "@outcomeDelay": {
+    "placeholders": { "delay": { "type": "String" } }
+  },
+
+  "fixGuideTitle": "Fix guide",
+  "fixGuideAggressiveness": "Aggressiveness level: {rank}/5",
+  "@fixGuideAggressiveness": {
+    "placeholders": { "rank": { "type": "int" } }
+  },
+  "fixGuideUnverified": "The steps for {brand} haven't been physically verified on a real device of that brand yet — menus may differ.",
+  "@fixGuideUnverified": {
+    "placeholders": { "brand": { "type": "String" } }
+  },
+  "fixGuideConfirmCheckbox": "I confirm I did this",
+  "fixGuideOpenFailed": "Couldn't open settings automatically. Go manually: Settings → Battery / Apps.",
+  "fixGuideOpenSucceeded": "Settings opened — check whether you changed the required option.",
+  "fixGuideNoSteps": "There are no steps defined for this brand yet.",
+  "fixGuideLoadError": "Couldn't load the fix guide for this device's brand.",
+
+  "historyTitle": "Test history",
+  "historyEmpty": "No tests yet. Run your first one from the Test tab.",
+  "historyDirtyTag": "Unreliable",
+  "historyUnknownTag": "Partly unknown",
+  "historyWindowLabel": "Window: {minutes} min",
+  "@historyWindowLabel": {
+    "placeholders": { "minutes": { "type": "int" } }
+  },
+
+  "aboutTitle": "About",
+  "aboutWhatItKnows": "What the app actually knows",
+  "aboutWhatItKnowsBody": "The app only reads what Android publicly allows it to read — the state of battery restrictions, permissions, and the results of its own delivery test.",
+  "aboutWhatItCannotKnow": "What the app can't know",
+  "aboutWhatItCannotKnowBody": "Android has no public way to read whether a manufacturer's 'autostart' switches are on. That's why the app asks you to confirm by hand instead of claiming to know something it never checked.",
+  "aboutNoDataCollection": "The app doesn't collect, send, or store any of your data outside your phone.",
+  "aboutNoBatteryClaim": "The app doesn't claim it will extend your battery life — its only purpose is to show the truth about why notifications aren't arriving.",
+  "aboutTipTitle": "Tip",
+  "aboutTipBody": "Someday there will be an optional tip here to support development. Purchases aren't available in the app yet.",
+  "aboutTipComingSoon": "Coming soon",
+  "aboutVersion": "Version {version}"
+}

@@ -1,0 +1,459 @@
+{
+  "profiles": [
+    {
+      "id": "xiaomi",
+      "displayName": "Xiaomi / Redmi / POCO",
+      "manufacturerMatches": ["xiaomi", "redmi", "poco"],
+      "aggressivenessRank": 5,
+      "verified": false,
+      "steps": [
+        {
+          "id": "xiaomi_autostart",
+          "titleHr": "Uključi Autostart",
+          "titleEn": "Turn on Autostart",
+          "bodyHr": "Otvara se Sigurnost → Autostart. Pronađi BagerWake na popisu i uključi prekidač pored njega.",
+          "bodyEn": "This opens Security → Autostart. Find BagerWake in the list and switch it on.",
+          "requiresManualConfirm": true,
+          "intents": [
+            { "package": "com.miui.securitycenter", "component": "com.miui.permcenter.autostart.AutoStartManagementActivity" },
+            { "action": "miui.intent.action.OP_AUTO_START", "package": "com.miui.securitycenter" },
+            { "action": "android.settings.APPLICATION_DETAILS_SETTINGS", "usesPackageData": true }
+          ]
+        },
+        {
+          "id": "xiaomi_battery_saver",
+          "titleHr": "Baterija na 'Bez ograničenja'",
+          "titleEn": "Battery to 'No restrictions'",
+          "bodyHr": "Otvara se štednja baterije za ovu aplikaciju. Odaberi 'Bez ograničenja' da je MIUI/HyperOS ne gasi u pozadini.",
+          "bodyEn": "Opens per-app battery saver. Pick 'No restrictions' so MIUI/HyperOS stops closing BagerWake in the background.",
+          "requiresManualConfirm": true,
+          "intents": [
+            { "package": "com.miui.powerkeeper", "component": "com.miui.powerkeeper.ui.HiddenAppsConfigActivity" },
+            { "action": "android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS" },
+            { "action": "android.settings.APPLICATION_DETAILS_SETTINGS", "usesPackageData": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "samsung",
+      "displayName": "Samsung",
+      "manufacturerMatches": ["samsung"],
+      "aggressivenessRank": 4,
+      "verified": false,
+      "steps": [
+        {
+          "id": "samsung_sleeping_apps",
+          "titleHr": "Makni BagerWake s popisa uspavanih",
+          "titleEn": "Remove BagerWake from sleeping apps",
+          "bodyHr": "Otvara se Briga o uređaju → Baterija. Ako je BagerWake na popisu aplikacija koje se uspavljuju, ukloni ga i dodaj ga u 'Nepraćene aplikacije'.",
+          "bodyEn": "Opens Device care → Battery. If BagerWake is on the sleeping-apps list, remove it and add it to 'Unmonitored apps' instead.",
+          "requiresManualConfirm": true,
+          "intents": [
+            { "package": "com.samsung.android.lool", "component": "com.samsung.android.sm.ui.battery.BatteryActivity" },
+            { "package": "com.samsung.android.lool", "component": "com.samsung.android.sm.battery.ui.BatteryActivity" },
+            { "action": "android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS" },
+            { "action": "android.settings.APPLICATION_DETAILS_SETTINGS", "usesPackageData": true }
+          ]
+        },
+        {
+          "id": "samsung_background_usage",
+          "titleHr": "Isključi ograničenje pozadinske potrošnje",
+          "titleEn": "Turn off background usage limits",
+          "bodyHr": "Otvara se popis ograničenja pozadinske potrošnje baterije. Provjeri da BagerWake nije označen za automatsko zaustavljanje.",
+          "bodyEn": "Opens the background usage limits list. Make sure BagerWake isn't flagged for auto-stop.",
+          "requiresManualConfirm": true,
+          "intents": [
+            { "package": "com.samsung.android.lool", "component": "com.samsung.android.sm.battery.ui.usage.CheckableAppListActivity" },
+            { "action": "android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS" },
+            { "action": "android.settings.APPLICATION_DETAILS_SETTINGS", "usesPackageData": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "huawei",
+      "displayName": "Huawei",
+      "manufacturerMatches": ["huawei"],
+      "aggressivenessRank": 5,
+      "verified": false,
+      "steps": [
+        {
+          "id": "huawei_app_launch",
+          "titleHr": "Ručno upravljanje pokretanjem aplikacije",
+          "titleEn": "Manually manage app launch",
+          "bodyHr": "Otvara se Upravitelj telefona → Pokretanje aplikacija. Isključi 'Automatski upravljaj' za BagerWake, pa ručno uključi Automatsko pokretanje, Sekundarno pokretanje i Rad u pozadini.",
+          "bodyEn": "Opens Phone Manager → App launch. Turn off 'Manage automatically' for BagerWake, then manually enable Auto-launch, Secondary launch and Run in background.",
+          "requiresManualConfirm": true,
+          "intents": [
+            { "package": "com.huawei.systemmanager", "component": "com.huawei.systemmanager.startupmgr.ui.StartupNormalAppListActivity" },
+            { "package": "com.huawei.systemmanager", "component": "com.huawei.systemmanager.optimize.process.ProtectActivity" },
+            { "action": "android.settings.APPLICATION_DETAILS_SETTINGS", "usesPackageData": true }
+          ]
+        },
+        {
+          "id": "huawei_protected_apps",
+          "titleHr": "Dodaj u zaštićene aplikacije",
+          "titleEn": "Add to protected apps",
+          "bodyHr": "Otvara se popis zaštićenih aplikacija u Bateriji. Uključi BagerWake da ga sustav ne ubija radi štednje energije.",
+          "bodyEn": "Opens the protected-apps list in Battery. Turn BagerWake on so the system stops killing it to save power.",
+          "requiresManualConfirm": true,
+          "intents": [
+            { "package": "com.huawei.systemmanager", "component": "com.huawei.systemmanager.optimize.process.ProtectActivity" },
+            { "action": "android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS" },
+            { "action": "android.settings.APPLICATION_DETAILS_SETTINGS", "usesPackageData": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "honor",
+      "displayName": "Honor",
+      "manufacturerMatches": ["honor"],
+      "aggressivenessRank": 4,
+      "verified": false,
+      "steps": [
+        {
+          "id": "honor_app_launch",
+          "titleHr": "Ručno upravljanje pokretanjem aplikacije",
+          "titleEn": "Manually manage app launch",
+          "bodyHr": "Otvara se System Manager → Pokretanje aplikacija. Isključi 'Automatski upravljaj' za BagerWake, pa ručno uključi Automatsko pokretanje, Sekundarno pokretanje i Rad u pozadini.",
+          "bodyEn": "Opens System Manager → App launch. Turn off 'Manage automatically' for BagerWake, then manually enable Auto-launch, Secondary launch and Run in background.",
+          "requiresManualConfirm": true,
+          "intents": [
+            { "package": "com.hihonor.systemmanager", "component": "com.hihonor.systemmanager.startupmgr.ui.StartupNormalAppListActivity" },
+            { "package": "com.hihonor.systemmanager", "component": "com.hihonor.systemmanager.appcontrol.activity.StartupAppControlActivity" },
+            { "package": "com.huawei.systemmanager", "component": "com.huawei.systemmanager.startupmgr.ui.StartupNormalAppListActivity" },
+            { "action": "android.settings.APPLICATION_DETAILS_SETTINGS", "usesPackageData": true }
+          ]
+        },
+        {
+          "id": "honor_battery",
+          "titleHr": "Dodaj u zaštićene aplikacije",
+          "titleEn": "Add to protected apps",
+          "bodyHr": "Otvara se zaštita baterije. Uključi BagerWake kao zaštićenu aplikaciju da ga sustav ne gasi.",
+          "bodyEn": "Opens battery protection. Turn BagerWake on as a protected app so the system doesn't kill it.",
+          "requiresManualConfirm": true,
+          "intents": [
+            { "package": "com.hihonor.systemmanager", "component": "com.hihonor.systemmanager.appcontrol.activity.StartupAppControlActivity" },
+            { "package": "com.huawei.systemmanager", "component": "com.huawei.systemmanager.optimize.process.ProtectActivity" },
+            { "action": "android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS" },
+            { "action": "android.settings.APPLICATION_DETAILS_SETTINGS", "usesPackageData": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oneplus",
+      "displayName": "OnePlus",
+      "manufacturerMatches": ["oneplus"],
+      "aggressivenessRank": 3,
+      "verified": false,
+      "steps": [
+        {
+          "id": "oneplus_battery_optimize",
+          "titleHr": "Isključi naprednu optimizaciju baterije",
+          "titleEn": "Turn off advanced battery optimization",
+          "bodyHr": "Otvara se popis pozadinske optimizacije. Isključi optimizaciju za BagerWake i dopusti mu rad u pozadini.",
+          "bodyEn": "Opens the background optimization list. Turn optimization off for BagerWake so it's allowed to run in the background.",
+          "requiresManualConfirm": true,
+          "intents": [
+            { "package": "com.oneplus.security", "component": "com.oneplus.security.chainlaunch.view.ChainLaunchAppListActivity" },
+            { "action": "com.android.settings.action.BACKGROUND_OPTIMIZE", "package": "com.oneplus.security" },
+            { "package": "com.coloros.safecenter", "component": "com.coloros.safecenter.permission.startup.StartupAppListActivity" },
+            { "action": "android.settings.APPLICATION_DETAILS_SETTINGS", "usesPackageData": true }
+          ]
+        },
+        {
+          "id": "oneplus_battery",
+          "titleHr": "Isključi optimizaciju baterije",
+          "titleEn": "Turn off battery optimization",
+          "bodyHr": "Otvara se sustavska optimizacija baterije. Postavi BagerWake na 'Ne optimiziraj'.",
+          "bodyEn": "Opens the system's battery optimization screen. Set BagerWake to 'Don't optimize'.",
+          "requiresManualConfirm": true,
+          "intents": [
+            { "action": "android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS" },
+            { "action": "android.settings.APPLICATION_DETAILS_SETTINGS", "usesPackageData": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oppo",
+      "displayName": "Oppo",
+      "manufacturerMatches": ["oppo"],
+      "aggressivenessRank": 5,
+      "verified": false,
+      "steps": [
+        {
+          "id": "oppo_startup_manager",
+          "titleHr": "Uključi Upravitelj pokretanja",
+          "titleEn": "Enable in Startup Manager",
+          "bodyHr": "Otvara se Upravitelj pokretanja aplikacija. Uključi prekidač za BagerWake da se smije pokrenuti sam od sebe.",
+          "bodyEn": "Opens the app Startup Manager. Turn the switch on for BagerWake so it's allowed to start itself.",
+          "requiresManualConfirm": true,
+          "intents": [
+            { "package": "com.coloros.safecenter", "component": "com.coloros.safecenter.permission.startup.StartupAppListActivity" },
+            { "package": "com.coloros.safecenter", "component": "com.coloros.safecenter.startupapp.StartupAppListActivity" },
+            { "package": "com.oppo.safe", "component": "com.oppo.safe.permission.startup.StartupAppListActivity" },
+            { "action": "android.settings.APPLICATION_DETAILS_SETTINGS", "usesPackageData": true }
+          ]
+        },
+        {
+          "id": "oppo_battery",
+          "titleHr": "Dopusti rad u pozadini",
+          "titleEn": "Allow background activity",
+          "bodyHr": "Otvara se potrošnja baterije za aplikaciju. Postavi je na 'Dopusti pozadinsku aktivnost' ili 'Bez ograničenja'.",
+          "bodyEn": "Opens the app's battery usage screen. Set it to 'Allow background activity' or 'No restrictions'.",
+          "requiresManualConfirm": true,
+          "intents": [
+            { "action": "android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS" },
+            { "action": "android.settings.APPLICATION_DETAILS_SETTINGS", "usesPackageData": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "realme",
+      "displayName": "Realme",
+      "manufacturerMatches": ["realme"],
+      "aggressivenessRank": 5,
+      "verified": false,
+      "steps": [
+        {
+          "id": "realme_startup_manager",
+          "titleHr": "Uključi Upravitelj pokretanja",
+          "titleEn": "Enable in Startup Manager",
+          "bodyHr": "Otvara se Upravitelj pokretanja aplikacija (realme UI je nadograđen ColorOS). Uključi prekidač za BagerWake.",
+          "bodyEn": "Opens the app Startup Manager (realme UI is built on ColorOS). Turn the switch on for BagerWake.",
+          "requiresManualConfirm": true,
+          "intents": [
+            { "package": "com.coloros.safecenter", "component": "com.coloros.safecenter.permission.startup.StartupAppListActivity" },
+            { "package": "com.coloros.safecenter", "component": "com.coloros.safecenter.startupapp.StartupAppListActivity" },
+            { "action": "android.settings.APPLICATION_DETAILS_SETTINGS", "usesPackageData": true }
+          ]
+        },
+        {
+          "id": "realme_battery",
+          "titleHr": "Dopusti rad u pozadini",
+          "titleEn": "Allow background activity",
+          "bodyHr": "Otvara se potrošnja baterije za aplikaciju. Postavi je na 'Dopusti pozadinsku aktivnost' ili 'Bez ograničenja'.",
+          "bodyEn": "Opens the app's battery usage screen. Set it to 'Allow background activity' or 'No restrictions'.",
+          "requiresManualConfirm": true,
+          "intents": [
+            { "action": "android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS" },
+            { "action": "android.settings.APPLICATION_DETAILS_SETTINGS", "usesPackageData": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vivo",
+      "displayName": "Vivo / iQOO",
+      "manufacturerMatches": ["vivo", "iqoo"],
+      "aggressivenessRank": 5,
+      "verified": false,
+      "steps": [
+        {
+          "id": "vivo_autostart",
+          "titleHr": "Uključi automatsko pokretanje",
+          "titleEn": "Enable autostart",
+          "bodyHr": "Otvara se i-Manager → Upravljanje pozadinom. Postavi BagerWake na 'Dopušteno' da se ne gasi u pozadini.",
+          "bodyEn": "Opens i-Manager → Background app management. Set BagerWake to 'Allow' so it isn't closed in the background.",
+          "requiresManualConfirm": true,
+          "intents": [
+            { "package": "com.iqoo.secure", "component": "com.iqoo.secure.ui.phoneoptimize.AddWhiteListActivity" },
+            { "package": "com.iqoo.secure", "component": "com.iqoo.secure.ui.phoneoptimize.BgStartUpManager" },
+            { "package": "com.vivo.permissionmanager", "component": "com.vivo.permissionmanager.activity.BgStartUpManagerActivity" },
+            { "action": "android.settings.APPLICATION_DETAILS_SETTINGS", "usesPackageData": true }
+          ]
+        },
+        {
+          "id": "vivo_battery",
+          "titleHr": "Provjeri visoku potrošnju u pozadini",
+          "titleEn": "Check high background power use",
+          "bodyHr": "Otvara se potrošnja baterije. Ako je BagerWake označen kao 'visoka potrošnja u pozadini', isključi to ograničenje.",
+          "bodyEn": "Opens battery usage. If BagerWake shows as 'high background power consumption', turn that restriction off.",
+          "requiresManualConfirm": true,
+          "intents": [
+            { "action": "android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS" },
+            { "action": "android.settings.APPLICATION_DETAILS_SETTINGS", "usesPackageData": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "motorola",
+      "displayName": "Motorola",
+      "manufacturerMatches": ["motorola"],
+      "aggressivenessRank": 2,
+      "verified": false,
+      "steps": [
+        {
+          "id": "motorola_battery",
+          "titleHr": "Isključi optimizaciju baterije",
+          "titleEn": "Turn off battery optimization",
+          "bodyHr": "Motorola je blizu čistog Androida, pa je ovo jedina bitna postavka. Odaberi 'Ne optimiziraj' za BagerWake.",
+          "bodyEn": "Motorola is close to stock Android, so this is the one setting that matters. Choose 'Don't optimize' for BagerWake.",
+          "requiresManualConfirm": true,
+          "intents": [
+            { "action": "android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS" },
+            { "action": "android.settings.APPLICATION_DETAILS_SETTINGS", "usesPackageData": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sony",
+      "displayName": "Sony",
+      "manufacturerMatches": ["sony"],
+      "aggressivenessRank": 2,
+      "verified": false,
+      "steps": [
+        {
+          "id": "sony_battery",
+          "titleHr": "Isključi STAMINA ograničenja",
+          "titleEn": "Turn off STAMINA restrictions",
+          "bodyHr": "Otvara se optimizacija baterije. Postavi BagerWake na 'Ne optimiziraj' da STAMINA način ne gasi pozadinski rad.",
+          "bodyEn": "Opens battery optimization. Set BagerWake to 'Don't optimize' so STAMINA mode doesn't stop background work.",
+          "requiresManualConfirm": true,
+          "intents": [
+            { "action": "android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS" },
+            { "action": "android.settings.APPLICATION_DETAILS_SETTINGS", "usesPackageData": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "asus",
+      "displayName": "Asus",
+      "manufacturerMatches": ["asus"],
+      "aggressivenessRank": 3,
+      "verified": false,
+      "steps": [
+        {
+          "id": "asus_autostart",
+          "titleHr": "Uključi automatsko pokretanje",
+          "titleEn": "Enable auto-start",
+          "bodyHr": "Otvara se Mobile Manager → Automatsko pokretanje. Uključi prekidač za BagerWake.",
+          "bodyEn": "Opens Mobile Manager → Auto-start. Turn the switch on for BagerWake.",
+          "requiresManualConfirm": true,
+          "intents": [
+            { "package": "com.asus.mobilemanager", "component": "com.asus.mobilemanager.autostart.AutoStartActivity" },
+            { "action": "android.settings.APPLICATION_DETAILS_SETTINGS", "usesPackageData": true }
+          ]
+        },
+        {
+          "id": "asus_battery",
+          "titleHr": "Isključi štednju baterije za app",
+          "titleEn": "Turn off power saving for the app",
+          "bodyHr": "Otvara se štednja baterije po aplikaciji. Postavi BagerWake na 'Bez ograničenja'.",
+          "bodyEn": "Opens per-app power saving. Set BagerWake to 'No restrictions'.",
+          "requiresManualConfirm": true,
+          "intents": [
+            { "package": "com.asus.mobilemanager", "component": "com.asus.mobilemanager.powersaver.PowerSaverSettings" },
+            { "action": "android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS" },
+            { "action": "android.settings.APPLICATION_DETAILS_SETTINGS", "usesPackageData": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nokia_hmd",
+      "displayName": "Nokia / HMD",
+      "manufacturerMatches": ["hmd global", "nokia", "hmd"],
+      "aggressivenessRank": 1,
+      "verified": false,
+      "steps": [
+        {
+          "id": "nokia_hmd_battery",
+          "titleHr": "Isključi optimizaciju baterije",
+          "titleEn": "Turn off battery optimization",
+          "bodyHr": "Nokia/HMD telefoni su blizu čistog Androida bez posebnog izbornika za autostart, pa je ovo dovoljno.",
+          "bodyEn": "Nokia/HMD phones are close to stock Android with no separate autostart menu, so this is enough.",
+          "requiresManualConfirm": true,
+          "intents": [
+            { "action": "android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS" },
+            { "action": "android.settings.APPLICATION_DETAILS_SETTINGS", "usesPackageData": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "transsion",
+      "displayName": "Tecno / Infinix / itel",
+      "manufacturerMatches": ["tecno", "infinix", "itel", "transsion"],
+      "aggressivenessRank": 4,
+      "verified": false,
+      "steps": [
+        {
+          "id": "transsion_phone_manager",
+          "titleHr": "Otvori Phone Manager i provjeri Autostart",
+          "titleEn": "Open Phone Manager and check Autostart",
+          "bodyHr": "HiOS/XOS nemaju provjeren izravan prečac na ovaj zaslon, pa se otvara sam Phone Manager. Unutra potraži 'Autostart' ili 'App launch' i uključi BagerWake.",
+          "bodyEn": "HiOS/XOS don't have a confirmed direct shortcut to this screen, so this opens Phone Manager itself. Inside, look for 'Autostart' or 'App launch' and turn BagerWake on.",
+          "requiresManualConfirm": true,
+          "intents": [
+            { "package": "com.transsion.phonemanager" },
+            { "action": "android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS" },
+            { "action": "android.settings.APPLICATION_DETAILS_SETTINGS", "usesPackageData": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "google_pixel",
+      "displayName": "Google / Pixel",
+      "manufacturerMatches": ["google"],
+      "aggressivenessRank": 1,
+      "verified": false,
+      "steps": [
+        {
+          "id": "google_pixel_battery",
+          "titleHr": "Isključi optimizaciju baterije",
+          "titleEn": "Turn off battery optimization",
+          "bodyHr": "Pixel koristi čisti Android, pa je ovo jedina postavka koja utječe na pozadinski rad.",
+          "bodyEn": "Pixel runs stock Android, so this is the only setting that affects background work.",
+          "requiresManualConfirm": true,
+          "intents": [
+            { "action": "android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS" },
+            { "action": "android.settings.APPLICATION_DETAILS_SETTINGS", "usesPackageData": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "generic",
+      "displayName": "Ostali Android telefoni",
+      "manufacturerMatches": [],
+      "aggressivenessRank": 3,
+      "verified": false,
+      "steps": [
+        {
+          "id": "generic_battery",
+          "titleHr": "Isključi optimizaciju baterije",
+          "titleEn": "Turn off battery optimization",
+          "bodyHr": "Otvara se sustavski popis optimizacije baterije. Pronađi BagerWake i postavi ga na 'Ne optimiziraj'.",
+          "bodyEn": "Opens the system's battery optimization list. Find BagerWake and set it to 'Don't optimize'.",
+          "requiresManualConfirm": true,
+          "intents": [
+            { "action": "android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS" },
+            { "action": "android.settings.APPLICATION_DETAILS_SETTINGS", "usesPackageData": true }
+          ]
+        },
+        {
+          "id": "generic_app_settings",
+          "titleHr": "Provjeri postavke aplikacije ručno",
+          "titleEn": "Check app settings by hand",
+          "bodyHr": "Nismo prepoznali točan model telefona, pa se otvaraju postavke aplikacije. Provjeri baterijska, obavijesna i autostart ograničenja ručno.",
+          "bodyEn": "We didn't recognize the exact phone model, so this opens the app's settings page. Check battery, notification and autostart restrictions by hand.",
+          "requiresManualConfirm": true,
+          "intents": [
+            { "action": "android.settings.APPLICATION_DETAILS_SETTINGS", "usesPackageData": true },
+            { "action": "android.settings.SETTINGS" }
+          ]
+        }
+      ]
+    }
+  ]
+}

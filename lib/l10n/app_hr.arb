@@ -1,0 +1,140 @@
+{
+  "@@locale": "hr",
+
+  "appTitle": "BagerWake",
+
+  "navDashboard": "Pregled",
+  "navTest": "Test",
+  "navFixGuide": "Vodič",
+  "navHistory": "Povijest",
+  "navAbout": "O aplikaciji",
+
+  "commonRetry": "Pokušaj ponovno",
+  "commonCancel": "Odustani",
+  "commonClose": "Zatvori",
+  "commonOpenSettings": "Otvori postavke",
+  "commonLoading": "Učitavanje…",
+  "commonError": "Nešto je pošlo po zlu.",
+  "commonUnknown": "Nepoznato",
+
+  "statusOk": "U redu",
+  "statusWarning": "Upozorenje",
+  "statusProblem": "Problem",
+  "statusUnavailable": "Ne može se provjeriti",
+  "unavailableReasonLabel": "Razlog",
+  "unavailableReasonFallback": "Aplikacija nije dobila razlog od sustava.",
+
+  "dashboardTitle": "Pregled",
+  "dashboardDeviceSubtitle": "Android {release} · API {sdk}",
+  "@dashboardDeviceSubtitle": {
+    "placeholders": {
+      "release": { "type": "String" },
+      "sdk": { "type": "int" }
+    }
+  },
+  "dashboardLoadError": "Nisam uspio pročitati stanje uređaja. Provjeri je li aplikaciji dano dopuštenje i pokušaj ponovno.",
+  "dashboardUnknownDevice": "Nepoznat uređaj",
+  "dashboardNotifPermButton": "Zatraži dopuštenje",
+
+  "diagBatteryOptimizationTitle": "Optimizacija baterije",
+  "diagBatteryOptimizationDesc": "Ako je aplikacija pod 'optimizacijom baterije', sustav joj gasi pozadinski rad kad je ne koristiš – notifikacije i alarmi mogu kasniti ili uopće ne stići.",
+
+  "diagNotificationsEnabledTitle": "Dopuštenje za notifikacije",
+  "diagNotificationsEnabledDesc": "Bez ovog dopuštenja sustav uopće ne prikazuje notifikacije aplikacije, bez obzira na sva ostala podešavanja.",
+
+  "diagExactAlarmPermissionTitle": "Dopuštenje za točne alarme",
+  "diagExactAlarmPermissionDesc": "Bez ovog dopuštenja Android smije alarm pomaknuti kasnije umjesto da zazvoni točno kad je zakazan.",
+
+  "diagBackgroundRestrictedTitle": "Ograničen rad u pozadini",
+  "diagBackgroundRestrictedDesc": "Kad je ovo uključeno, sustav gotovo potpuno blokira rad aplikacije dok je ne gledaš na ekranu – notifikacije obično uopće ne stignu.",
+
+  "diagStandbyBucketTitle": "Skupina aktivnosti (App Standby)",
+  "diagStandbyBucketDesc": "Android svrstava aplikacije u skupine prema tome koliko ih koristiš. U lošijoj skupini dobivaš manje prilika za pozadinski rad, pa notifikacije kasne.",
+
+  "diagDataSaverTitle": "Štednja podataka",
+  "diagDataSaverDesc": "Kad je uključena, aplikacije u pozadini ne smiju koristiti mobilni internet – poruke i sinkronizacija čekaju dok ručno ne otvoriš aplikaciju.",
+
+  "diagPowerSaveModeTitle": "Način uštede baterije",
+  "diagPowerSaveModeDesc": "Ovaj način dodatno guši pozadinski rad i odgađa alarme i notifikacije dok je uključen, kako bi se produžilo trajanje baterije.",
+
+  "diagDozeStateTitle": "Doze (stanje mirovanja)",
+  "diagDozeStateDesc": "Kad telefon duže vrijeme miruje bez dodira, Android periodično 'uspavljuje' sve aplikacije – notifikacije se grupiraju i stižu u paketima umjesto odmah.",
+
+  "testTitle": "Test dostave",
+  "testWindowLabel": "Trajanje testa",
+  "testWindow15": "15 min",
+  "testWindow30": "30 min",
+  "testWindow60": "60 min",
+  "testPreflightTitle": "Prije nego počneš",
+  "testPreflightBody": "Zaključaj ekran, ne otvaraj ovu aplikaciju i ostavi telefon na miru dok test traje. Android mora povjerovati da telefon miruje da bi uopće primijenio ograničenja koja testiramo – ako diraš telefon, rezultat neće biti pouzdano očitanje. Tri provjere su namjerno razmaknute kroz test, a ne sve na kraju: najjača provjera budi telefon i time bi spasila slabije, pa bi rezultat ispao bolji nego što stvarno jest. Zato će notifikacije stizati jedna po jedna.",
+  "testStartButton": "Pokreni test",
+  "testNeedPermissions": "Nedostaju dopuštenja potrebna za test.",
+  "testGoToDashboard": "Idi na Pregled",
+  "testRunningTitle": "Test u tijeku",
+  "testTimeRemaining": "Preostalo vrijeme: {time}",
+  "@testTimeRemaining": {
+    "placeholders": { "time": { "type": "String" } }
+  },
+  "testCancelButton": "Prekini test",
+  "testResultsTitle": "Rezultati testa",
+  "testDirtyResultBanner": "Ovo NIJE čisto očitanje.",
+  "testScreenUnlocked": "Ekran je bio otključan tijekom testa.",
+  "testScreenUnlockedUnknown": "Ne može se provjeriti je li ekran bio otključan tijekom testa (nedostaje dopuštenje za pristup korištenju) – rezultat vjerojatno stoji, ali to ne možemo potvrditi.",
+  "testRebooted": "Telefon se restartao tijekom testa.",
+  "testNewTest": "Novi test",
+  "testRunInProgress": "Test je već u tijeku – nastavljamo pratiti postojeći.",
+  "testNoResultsYet": "Rezultati još nisu spremni.",
+
+  "laneAlarmClockTitle": "Alarm (najjači)",
+  "laneAlarmClockDesc": "Najjača vrsta alarma koju Android nudi – tako rade budilice.",
+  "laneExactIdleTitle": "Točan podsjetnik",
+  "laneExactIdleDesc": "Ovo koriste aplikacije za podsjetnike.",
+  "laneWorkManagerTitle": "Pozadinska sinkronizacija",
+  "laneWorkManagerDesc": "Ovo koriste chat i sinkronizacijske aplikacije – prvo što proizvođači ugase.",
+
+  "outcomePending": "Čeka se…",
+  "outcomeFiredOnTime": "Stiglo na vrijeme",
+  "outcomeFiredLate": "Kasnilo",
+  "outcomeNeverFired": "Nikad nije stiglo",
+  "outcomeCancelled": "Otkazano",
+  "outcomeDelay": "Kašnjenje: {delay}",
+  "@outcomeDelay": {
+    "placeholders": { "delay": { "type": "String" } }
+  },
+
+  "fixGuideTitle": "Vodič za popravak",
+  "fixGuideAggressiveness": "Razina agresivnosti: {rank}/5",
+  "@fixGuideAggressiveness": {
+    "placeholders": { "rank": { "type": "int" } }
+  },
+  "fixGuideUnverified": "Koraci za marku {brand} još nisu fizički provjereni na pravom uređaju te marke – izbornici se mogu razlikovati.",
+  "@fixGuideUnverified": {
+    "placeholders": { "brand": { "type": "String" } }
+  },
+  "fixGuideConfirmCheckbox": "Potvrđujem da sam ovo napravio/la",
+  "fixGuideOpenFailed": "Nisam uspio automatski otvoriti postavke. Idi ručno: Postavke → Baterija / Aplikacije.",
+  "fixGuideOpenSucceeded": "Otvorene su postavke – provjeri jesi li promijenio/la traženu opciju.",
+  "fixGuideNoSteps": "Za ovu marku trenutno nema definiranih koraka.",
+  "fixGuideLoadError": "Nisam uspio učitati vodič za ovu marku uređaja.",
+
+  "historyTitle": "Povijest testova",
+  "historyEmpty": "Još nema testova. Pokreni prvi na kartici Test.",
+  "historyDirtyTag": "Nepouzdano",
+  "historyUnknownTag": "Djelomično nepoznato",
+  "historyWindowLabel": "Prozor: {minutes} min",
+  "@historyWindowLabel": {
+    "placeholders": { "minutes": { "type": "int" } }
+  },
+
+  "aboutTitle": "O aplikaciji",
+  "aboutWhatItKnows": "Što aplikacija stvarno zna",
+  "aboutWhatItKnowsBody": "Aplikacija čita samo ono što Android javno dopušta pročitati – stanje baterijskih ograničenja, dopuštenja i rezultate vlastitog testa dostave koji sama provede.",
+  "aboutWhatItCannotKnow": "Što aplikacija ne može znati",
+  "aboutWhatItCannotKnowBody": "Android ne nudi javni način da se pročita jesu li proizvođačevi prekidači za 'autostart' uključeni. Zato te aplikacija traži da to potvrdiš ručno, umjesto da tvrdi da zna nešto što nije provjerila.",
+  "aboutNoDataCollection": "Aplikacija ne prikuplja, ne šalje i ne pohranjuje nikakve tvoje podatke izvan tvog telefona.",
+  "aboutNoBatteryClaim": "Aplikacija ne tvrdi da će produžiti trajanje baterije – njena jedina svrha je pokazati istinu o tome zašto notifikacije ne stižu.",
+  "aboutTipTitle": "Napojnica",
+  "aboutTipBody": "Ovdje će jednog dana biti opcionalna napojnica za razvoj aplikacije. Trenutno kupnja nije dostupna u aplikaciji.",
+  "aboutTipComingSoon": "Uskoro",
+  "aboutVersion": "Verzija {version}"
+}
